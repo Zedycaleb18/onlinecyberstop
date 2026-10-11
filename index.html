@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Online Cyber Stop | Data, Minutes &amp; SMS Bundles</title>
+<meta name="description" content="Buy data, minutes and SMS bundles with or without Okoa. Pay to Till 6607579 and get instant delivery, 24/7.">
+<meta name="theme-color" content="#3B9E1F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500&display=swap">
+<style>
+:root{
+  --green:#3B9E1F;
+  --green-deep:#2C7A15;
+  --mint:#A8DC8E;
+  --black:#000;
+  --ink:#111;
+  --red:#E4181F;
+  --grey:#E8E8E8;
+  --note:#FDECEC;
+  --note-line:#F3B9B9;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--ink);font-family:'Montserrat',system-ui,sans-serif;font-weight:600;line-height:1.35;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--black);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* Top bars, same stack as the poster */
+.brand{background:var(--green);color:#fff}
+.brand .wrap{display:flex;align-items:center;justify-content:center;gap:16px;padding-top:18px;padding-bottom:18px}
+.brand h1{margin:0;font-size:clamp(30px,6.4vw,64px);font-weight:900;letter-spacing:-.01em;line-height:1;text-align:center}
+.shield{flex:none;width:clamp(34px,5vw,60px);height:auto}
+.till-bar{background:var(--black);color:#fff;border-top:5px solid var(--green);border-bottom:5px solid var(--green)}
+.till-bar .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 22px;padding-top:12px;padding-bottom:12px}
+.till{font-size:clamp(28px,6vw,60px);font-weight:900;line-height:1.05;letter-spacing:-.01em}
+.till .hi{color:var(--red)}
+.copy{appearance:none;border:2px solid #fff;background:transparent;color:#fff;font:inherit;font-weight:800;font-size:14px;padding:8px 16px;border-radius:999px;cursor:pointer}
+.copy:hover{background:#fff;color:#000}
+.tag{background:var(--grey);text-align:center;font-weight:800;font-size:clamp(16px,2.8vw,28px);padding:14px 16px}
+.tag span{color:var(--green)}
+
+/* Action buttons */
+.hero{padding:26px 0 8px}
+.hero .wrap{display:flex;flex-direction:column;align-items:center;gap:18px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:17px;padding:15px 26px;border-radius:999px;border:3px solid var(--black);transition:transform .12s ease}
+.btn:active{transform:scale(.97)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn.main{background:var(--green);color:#fff;border-color:var(--green)}
+.btn.main:hover{background:var(--green-deep);border-color:var(--green-deep)}
+.btn.alt{background:#fff;color:var(--black)}
+.btn.alt:hover{background:var(--black);color:#fff}
+.btn.alt:hover svg{fill:#fff}
+.btn.alt svg{fill:var(--green)}
+.btn.main svg{fill:#fff}
+.lead{margin:0;text-align:center;font-weight:700;font-size:16px;max-width:520px;color:#333}
+
+/* Section banner */
+.banner{margin:22px 0 22px;background:var(--mint);border-radius:999px;text-align:center;font-weight:900;font-size:clamp(17px,3.6vw,38px);padding:12px 18px;letter-spacing:-.005em}
+
+/* Price panel */
+.panel{border:4px solid var(--black);border-radius:30px;padding:26px 24px 24px;display:grid;grid-template-columns:1fr 1fr;gap:0 0;position:relative}
+.panel::before{content:"";position:absolute;left:50%;top:26px;bottom:26px;width:3px;background:var(--black);transform:translateX(-50%)}
+.col{display:flex;flex-direction:column;gap:22px;min-width:0}
+.col:first-child{padding-right:26px}
+.col:last-child{padding-left:26px}
+.pill{display:inline-flex;align-items:center;flex-wrap:wrap;gap:4px 14px;border-radius:999px;padding:6px 20px 6px 8px;margin:0 0 6px;max-width:100%}
+.pill b{font-size:clamp(20px,3vw,34px);font-weight:900;line-height:1.1;padding:4px 14px}
+.pill small{font-size:clamp(13px,1.7vw,17px);font-weight:800}
+.pill.green{background:var(--green);color:#fff}
+.pill.black{background:var(--black);color:#fff}
+.pill.hot{background:linear-gradient(90deg,#F2A100,#7DB82A);color:#fff}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:baseline;padding:7px 0;font-size:clamp(17px,2.2vw,24px);font-weight:900;letter-spacing:-.01em}
+.list li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--black);align-self:center}
+.list li .t{display:block}
+.list li .when{display:block;grid-column:2;color:#B3141A;font-style:italic;font-weight:600;font-size:clamp(14px,1.7vw,18px);letter-spacing:0}
+.warn{display:flex;gap:10px;align-items:flex-start;background:var(--note);border:1.5px solid var(--note-line);border-radius:10px;padding:10px 12px;font-size:14px;font-weight:600;color:#7A1F1F}
+.warn svg{flex:none;width:26px;height:26px}
+
+/* How to buy bar, black like the poster footer */
+.buy{margin:28px 0 0;background:var(--black);color:#fff;border-radius:30px;padding:26px 28px;display:grid;grid-template-columns:1.3fr 1fr;gap:22px 30px;align-items:center}
+.buy h2{margin:0 0 4px;font-size:clamp(16px,2.2vw,22px);font-weight:800}
+.buy .big{font-size:clamp(28px,4.5vw,44px);font-weight:900;color:#6ED43F;line-height:1.1}
+.steps{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:16px;font-weight:600}
+.steps li{display:flex;gap:10px;align-items:baseline}
+.steps li::before{content:"\00BB";color:#6ED43F;font-weight:900}
+.steps b{color:#6ED43F;font-weight:800}
+.reach{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.reach .phone{display:flex;align-items:center;gap:12px;font-size:clamp(22px,3.4vw,32px);font-weight:900;text-decoration:none}
+.reach .phone i{width:44px;height:44px;border-radius:50%;background:var(--green);display:grid;place-items:center;flex:none}
+.reach .phone svg{width:24px;height:24px;fill:#fff}
+.reach small{font-weight:600;font-size:14px;color:#ddd}
+.reach .btns{justify-content:flex-start}
+.reach .btn{font-size:15px;padding:12px 20px}
+.reach .btn.alt{background:transparent;color:#fff;border-color:#fff}
+.reach .btn.alt svg{fill:#6ED43F}
+.reach .btn.alt:hover{background:#fff;color:#000}
+.reach .btn.alt:hover svg{fill:var(--green)}
+
+footer{margin-top:28px;background:var(--green);color:#fff;text-align:center;padding:18px 16px 90px;font-weight:700;font-size:14px}
+
+/* Floating WhatsApp button, always in reach */
+.fab{position:fixed;right:16px;bottom:16px;z-index:20;display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#000;text-decoration:none;font-weight:800;font-size:15px;padding:13px 18px 13px 14px;border-radius:999px;border:3px solid #000;box-shadow:0 4px 0 #000}
+.fab svg{width:26px;height:26px;fill:#000}
+.fab:active{transform:translateY(2px);box-shadow:0 2px 0 #000}
+
+@media (max-width:820px){
+  .panel{grid-template-columns:1fr;padding:22px 18px}
+  .panel::before{display:none}
+  .col:first-child,.col:last-child{padding:0}
+  .col:first-child{margin-bottom:22px;padding-bottom:22px;border-bottom:3px solid var(--black)}
+  .buy{grid-template-columns:1fr;padding:22px 20px}
+}
+@media (max-width:480px){
+  .wrap{padding:0 14px}
+  .btn{width:100%;justify-content:center}
+  .fab span{display:none}
+  .fab{padding:13px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+</svg>
+
+<header>
+  <div class="brand">
+    <div class="wrap">
+      <svg class="shield" viewBox="0 0 64 72" fill="none" aria-hidden="true">
+        <path d="M32 3 6 12v22c0 17 11 30 26 35 15-5 26-18 26-35V12L32 3z" fill="#2C7A15" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+        <rect x="21" y="32" width="22" height="17" rx="3" fill="#fff"/>
+        <path d="M25 32v-5a7 7 0 0 1 14 0v5" stroke="#fff" stroke-width="4" fill="none"/>
+        <circle cx="32" cy="40" r="2.6" fill="#2C7A15"/>
+      </svg>
+      <h1>ONLINE CYBER STOP</h1>
+    </div>
+  </div>
+  <div class="till-bar">
+    <div class="wrap">
+      <div class="till">Till No: 6607<span class="hi">579</span></div>
+      <button class="copy" type="button" id="copyTill" aria-label="Copy till number 6607579">Copy till</button>
+    </div>
+  </div>
+  <div class="tag">With or without Okoa <span>&bull;</span> Instant Deliveries</div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="btns">
+        <a class="btn main" href="https://wa.me/254742881736?text=Hello%20Online%20Cyber%20Stop%2C%20I%20need%20help%20with%20a%20bundle." target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#wa"/></svg>Chat with us on WhatsApp
+        </a>
+        <a class="btn alt" href="https://chat.whatsapp.com/BdKdswFUvQaAnlNJPkATs9?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#wa"/></svg>Join our WhatsApp group
+        </a>
+      </div>
+      <p class="lead">Pay the exact amount to the till and your bundle arrives in 0&ndash;3 seconds.</p>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="offers">
+    <div class="banner" id="offers">PURCHASE &mdash; DATA &bull; MINUTES &bull; SMS</div>
+
+    <div class="panel">
+      <div class="col">
+        <div>
+          <h2 class="pill green" style="margin:0 0 6px"><b>DATA</b><small>- Purchase Once per day</small></h2>
+          <ul class="list">
+            <li><span class="t">KSH 19 &mdash; 1GB &bull; 1HR</span><span class="when">Only from 0000hrs to 1900hrs</span></li>
+            <li><span class="t">KSH 20 &mdash; 250MB &bull; 24HRS</span></li>
+            <li><span class="t">KSH 49 &mdash; 400MB &bull; 1 WEEK</span></li>
+            <li><span class="t">KSH 50 &mdash; 1.5GB &bull; 3HRS</span><span class="when">Only from 0000hrs to 1900hrs</span></li>
+            <li><span class="t">KSH 52 &mdash; 750MB &bull; 24HRS</span></li>
+            <li><span class="t">KSH 55 &mdash; 1GB &bull; TILL MIDNIGHT</span></li>
+            <li><span class="t">KSH 99 &mdash; 1.5GB &bull; 24HRS</span></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="pill green" style="margin:0 0 6px"><b>DATA</b><small>- Purchase Many Times</small></h2>
+          <ul class="list">
+            <li><span class="t">KSH 21 &mdash; 1GB &bull; 1HR</span></li>
+            <li><span class="t">KSH 24 &mdash; 250MB &bull; 24HRS</span></li>
+            <li><span class="t">KSH 52 &mdash; 750MB &bull; 24HRS</span></li>
+            <li><span class="t">KSH 53 &mdash; 1.5GB &bull; 3HRS</span></li>
+            <li><span class="t">KSH 110 &mdash; 2GB &bull; 24HRS</span></li>
+          </ul>
+        </div>
+        <div class="warn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 21h22L12 2z" fill="#E4181F"/><path d="M12 9v5" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="17.2" r="1.4" fill="#fff"/></svg>
+          <span>Note: KSH 19, KSH 50, KSH 21 &amp; KSH 53 are only available from 2300hrs to 1900hrs.</span>
+        </div>
+      </div>
+
+      <div class="col">
+        <div>
+          <h2 class="pill black" style="margin:0 0 6px"><b>MINUTES</b><small>- Purchase Many Times</small></h2>
+          <ul class="list">
+            <li><span class="t">KSH 22 &mdash; 43 MINS &bull; 3HRS</span></li>
+            <li><span class="t">KSH 23 &mdash; 45 MINS &bull; 3HRS</span></li>
+            <li><span class="t">KSH 51 &mdash; 50 MINS &bull; MIDNIGHT</span></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="pill black" style="margin:0 0 6px"><b>SMS</b><small>- Purchase Many Times</small></h2>
+          <ul class="list">
+            <li><span class="t">KSH 5 &mdash; 20 SMS &bull; 24HRS</span></li>
+            <li><span class="t">KSH 20 &mdash; 200 SMS &bull; 24HRS</span></li>
+            <li><span class="t">KSH 30 &mdash; 1000 SMS &bull; 1 WEEK</span></li>
+            <li><span class="t">KSH 101 &mdash; 1500 SMS &bull; 1 WEEK</span></li>
+            <li><span class="t">KSH 201 &mdash; 3500 SMS &bull; 1 MONTH</span></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="pill hot" style="margin:0 0 6px"><b>&#128293; HOT OFFERS</b></h2>
+          <ul class="list">
+            <li><span class="t">KSH 250 &mdash; 200 MINS &bull; 1 WEEK</span></li>
+            <li><span class="t">KSH 999 &mdash; 10GB &bull; MONTHLY</span></li>
+            <li><span class="t">KSH 270 &mdash; 5GB &bull; 3 DAYS</span></li>
+            <li><span class="t">KSH 320 &mdash; 375 MINS &bull; 1 WEEK</span></li>
+            <li><span class="t">KSH 300 &mdash; 2.5GB &bull; 1 WEEK</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="buy" id="buy">
+      <div>
+        <h2>PURCHASE BY PAYING EXACT AMOUNT TO</h2>
+        <div class="big">TILL NO: 6607579</div>
+        <ul class="steps">
+          <li>Open <b>Lipa na M-Pesa</b></li>
+          <li>Choose <b>Buy Goods &amp; Services</b></li>
+          <li>Enter Till <b>6607579</b></li>
+          <li>Enter the <b>exact amount</b></li>
+          <li>Enter your M-Pesa PIN and wait for instant delivery (0&ndash;3 sec)</li>
+        </ul>
+      </div>
+      <div class="reach">
+        <a class="phone" href="tel:+254742881736"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1l-2.2 2.2z"/></svg></i>+254 742 881736</a>
+        <small>Available 24/7 &bull; Instant Deliveries</small>
+        <div class="btns">
+          <a class="btn main" href="https://wa.me/254742881736?text=Hello%20Online%20Cyber%20Stop%2C%20I%20need%20help%20with%20a%20bundle." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Chat on WhatsApp</a>
+          <a class="btn alt" href="https://chat.whatsapp.com/BdKdswFUvQaAnlNJPkATs9?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Join group</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; Online Cyber Stop &bull; Till No. 6607579</footer>
+
+<a class="fab" href="https://wa.me/254742881736?text=Hello%20Online%20Cyber%20Stop%2C%20I%20need%20help%20with%20a%20bundle." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp us</span>
+</a>
+
+<script>
+(function(){
+  var b=document.getElementById('copyTill');
+  if(!b)return;
+  b.addEventListener('click',function(){
+    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy till'},1800)};
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText('6607579').then(done,done);return}
+    }catch(e){}
+    var t=document.createElement('textarea');t.value='6607579';document.body.appendChild(t);t.select();
+    try{document.execCommand('copy')}catch(e){}
+    document.body.removeChild(t);done();
+  });
+})();
+</script>
+</body>
+</html>
